@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    
+}
+
+header {
+    background-color: #FF914C;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+.menu{
+    cursor: pointer;
+    display: none;
+}
+
+.menu .bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: #FEBD59;
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+.menu .bar:nth-child(2){
+    background: white;
+}
+
+a:hover{
+    transition: 0.8s all;
+}
+
+
+#inscreva-se-btn{
+    border: 2px solid #FEBD59;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 30px;
+}
+
+#inscreva-se-btn:hover{
+    background-color: #FEBD59;
+    color: white;
+}
+
+.list-itens, .list-itens2 {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.list-itens a {
+    text-decoration: none;
+    color: white;
+    padding: 1.5rem;
+    transform: 2ms ease-in;
+    position: relative;
+}
+.list-itens2 a {
+    text-decoration: none;
+    color: white;
+    padding: 1.5rem;
+    transform: 2ms ease-in;
+    position: relative;
+}
+
+.list-itens a:before {
+    content: ' ';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0px;
+    height: 1px;
+    background-color: #FEBD59;
+    transition: all 0.8s ease;;
+}
+#icon a:before{
+    content: ' ';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0px;
+    height: 1px;
+    background-color: #FEBD59;
+    transition: all 0.8s ease;;
+}
+
+#icon a:hover:before {
+    width: 100%;
+
+}
+
+
+.list-itens a:hover:before {
+    width: 100%;
+
+}
+
+
+h1{
+    color: #FF914C;
+}
+
+.logo {
+    width: 110px;
+    height: 110px;
+    margin-left: 50px;
+}
+
+article {
+    font-size: 20px;
+    display: grid;
+    grid-template: 2fr 2fr 2fr;
+    justify-content: center;
+}
+
+
+.sobrenos {
+    color: black;
+    grid-row: 1/1;
+    grid-column: 1;
+    width: 600px;
+    margin-top: 50px;
+}
+
+.sobreH1 {
+    margin-top: 10px;
+    grid-row: 1/1;
+    grid-column: 1;
+}
+
+.mulher {
+    width: 600px;
+}
+
+.credito {
+    color: black;
+    grid-row: 2/2;
+    grid-column: 2;
+    width: 600px;
+    margin-top: 50px;
+}
+
+.creditoH1 {
+    margin-top: 10px;
+    grid-row: 2/2;
+    grid-column: 2;
+}
+
+.empresa {
+    color: black;
+    grid-row: 3;
+    grid-column: 1;
+    margin-top: 50px;
+    width: 600px;
+}
+
+.empresaH1 {
+    margin-top: 10px;
+    grid-row: 3;
+    grid-column: 1;
+}
+
+.graficos {
+    width: 600px;
+}
+
+form{
+    
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+form [type="submit"]{
+    height: 50px;
+    width: 50%;
+    background-color: #FF914C;
+    color: white;
+    font-weight: bold;
+}
+form [type="submit"]:hover{
+    cursor: pointer;
+}
+
+input{
+    margin-top: 20px;
+    height: 20px;
+    padding: 15px;
+    border-radius: 20px;
+    border: none;
+    font-size: 15px;
+}
+
+footer {
+    background-color: #FF914C;
+    padding: 8px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ul1{
+    width: 20%;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.capsula{
+    display: flex;
+    justify-content: center;
+}
+#desenvolvedor{
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer a{
+    color: rgb(102, 98, 98);
+    text-decoration: none;
+}
+
+@media (max-width:1230px) {
+    .mulher{
+        display: none;
+    }
+    .homem{
+        display: none;
+    }
+    .graficos{
+        display: none;
+    }
+    
+    article{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu{
+        display: block;
+    }
+    .menu.ativo{
+        position: fixed;
+        right: 0;
+    }
+    .menu.ativo .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .menu.ativo .bar:nth-child(2){
+        opacity: 0;
+    }
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .header-menu{
+        padding: 18px 20px;
+    }
+    .list-itens{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: #FEBD59;
+        gap: -10px;
+        transition: 0.3s;
+        
+    }
+    .list-itens.ativo{
+        right: 0;
+        width: 40%;
+        height: 40%;
+    }
+    .ul1{
+        margin: 8px 0;
+        width: 300px;
+    }
+}
+
+@media (max-width:770px){
+    .capsula{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #img{
+        width: 250px;
+        height: 250px;
+    }
+    .ul1{
+        width: 300px;
+    }
+}
+@media (max-width:600px){
+   
+    #icon{
+        display: none;
+        pointer-events: none;
+    }
+    #inscreva-se-btn{
+        font-size: 70%;
+        margin: auto;
+    }
+    .menu{
+        margin-right: 10px;
+    }
+    .list-itens2{
+        flex-direction: row-reverse;
+    }
+    .logo{
+        width: 30%;
+        height: 30%;
+        margin-left: 10px;
+    }
+    article{
+        display: block;
+        margin-left: 10px;
+        font-size: 90%;
+    }
+    .sobrenos, .credito, .empresa{
+        width: 300px;
+        margin-left: 15px;
+    }
+    #form{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    footer #img{
+       display: none;
+    }
+    .ul1{
+        width: 300px;
+    }
+}
